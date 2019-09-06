@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'artworkui/main.css' %}">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+      <title>Cleveland Museum of Art Collection</title>
+    </head>
+
+    <body>
+
+      <div class="animated fadeIn title">
+        Cleveland Museum of Art Collection
+      </div>
+
+      <div class="animated fadeIn art-content">
+        {% for art in artwork %}
+        <div class="art-object">
+          <div id="art-image" style="background-image:url('static/artworkui/images/{{art.accession_number}}_reduced.jpg')" ></div>
+          <div class="art-description">
+            <div>
+              <span>{{ art.title }} </span>
+              {% if art.creators|length > 3 %}
+              <p> {{art.creators.0.description}} </p>
+              <p> {{art.creators.1.description}} </p>
+              <p> {{art.creators.3.description}} </p>
+              <p> and more... </p>
+             {% else %}
+
+             {% for creator in art.creators %}
+             <p> {{creator.description}} </p>
+             {% endfor %}
+
+             {% endif %}
+           </div>
+         </div>
+       </div>
+       {% endfor %}
+     </div>
+
+   </body>
+
+  </html>

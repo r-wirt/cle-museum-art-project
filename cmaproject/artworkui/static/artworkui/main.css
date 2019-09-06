@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Lusitana:400,700&display=swap');
+
+
+.title {
+
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Lusitana', serif;
+}
+
+.art-content{
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.art-object{
+
+  width:400px;
+  height:400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+  padding: 50px;
+  display:inline-block;
+
+}
+.more-info{
+  display: block;
+  position: relative;
+  text-align: left;
+  font-family: 'Lusitana', serif;
+  bottom: 100px;
+  left:850px;
+  top: -600px;
+
+  width: 350px;
+  font-size: 15px;
+
+}
+
+#art-image{
+
+  height:440px;
+  border: black solid 1px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+
+}
+
+.art-description {
+  padding-top:10px;
+  font-family: "Lusitana";
+  text-align: left;
+
+
+}
+
+.art-description div{
+
+  border-left: 1px solid black;
+  padding: 5px;
+
+}
+
+.art-description div > span{
+    font-weight: 700;
+}
+
+
+.art-description div > p{
+  font-size: 11px;
+}
+.art-description div > p{
+  margin:0px;
+}
